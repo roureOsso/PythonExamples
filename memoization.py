@@ -92,15 +92,14 @@ See decorators for more details.
 
 
 @memoize
-def fib(n, a):
+def fib(n):
     """
     Of course the cleanest solution is to use a Python Decorator so the used doesn't need to decorate nothing on its own
     """
-    print(a)
     if n <= 1:
         return n
     else:
-        return fib(n - 1, a) + fib(n - 2, a)
+        return fib(n - 1) + fib(n - 2)
 
 
 """This three solutions are basically the same when it comes to evaluation time."""
